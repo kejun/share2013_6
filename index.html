@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+  <meta name="format-detection" content="telephone=no"/>
+  <title>工程之美 &middot; kejun</title>
+  <base target="_blank">
+  <link rel="apple-touch-icon-precomposed" href="">
+  <link rel="stylesheet" href="static/css/prism.css"  media="screen"/>
+  <link rel="stylesheet" href="static/css/slides.css" media="screen" />
+
+  <style media="screen">
+  body {
+    background-color: #777;
+  }
+
+  .cover { position: relative; }
+
+  .cover {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%) scale(1) translateZ(0);
+  }
+
+  .page h2 {
+    color: steelblue;
+  }
+
+  .col {
+    display: inline-block;
+    vertical-align: top;
+  }
+
+  .page-cover .title {
+    padding-left: .5em;
+    white-space: nowrap;
+    font-size: 9em;
+    color: #fff;
+    letter-spacing: .5em;
+    border-radius: 5px;
+    text-shadow: 0 0 50px #fff;
+  }
+
+  .page-cover .sub-title {
+    font-size: 18px;
+    color: #333;
+    text-shadow: 0 0 50px #fff;
+  }
+
+  .page-cover .author {
+    margin-top: 2em;
+    color: #fff;
+  }
+
+  .page-cover .author img {
+    margin-right: 1em;
+    width: 24px;
+    vertical-align: middle;
+  }
+
+  .css-syntax {
+    position: relative;
+    padding: 20px;
+    font-size: 18px;
+  }
+
+  .css-syntax i {
+    font-style: normal;
+  }
+
+  .css-syntax:hover i:hover {
+    background: #f30;
+  }
+
+  .css-syntax:hover i {
+    padding: 3px 5px 4px;
+    border-radius: 10px;
+    background: #04f;
+    margin: 0 3px;
+  }
+
+  .css-syntax code {
+    display: inline-block;
+    background: #039;
+    line-height: 1;
+    padding: 6px 10px 8px;
+    border-radius: 10px;
+    color: #fff;
+  }
+
+  .page-center > article,
+  .page-end > article {
+    display: -webkit-flex;
+    -webkit-justify-content: center;
+    -webkit-align-items: center;
+  }
+
+  .page-center p {
+    font-size: 60px;
+  }
+
+  .page-end p {
+    font-size: 100px;
+  }
+  </style>
+  <style media="print">
+   .no-support, iframe { display: none; }
+   .page { margin-bottom: 2em; }
+  </style>
+</head>
+<body>
+<h1>工程之美 &middot; kejun</h1>
+
+<div class="page page-cover">
+<article style="background:#fff url(static/pics/bg.jpg) no-repeat 0 0;background-size: 100% auto;">
+<div class="page-cover-content">
+<div class="title">
+   工程之美
+</div>
+<div class="author"><a href="http://www.douban.com/people/listenpro/"><img src="http://img3.douban.com/icon/u1170308-32.jpg" width="24" alt=""></a>Kejun (@kejunz)</div>
+</div>
+</article>
+</div>
+
+
+
+  <div class="page">
+  <article>
+    <h2>"简单"背后</h2>
+    <ul class="list-1 col">
+      <li>未登录首页：2个版本</li>
+      <li>登录首页: 最多时6个版本</li>
+      <li>小组首页：最多时5个版本</li>
+      <li>广播类型全集：195种</li>
+      <li>提醒类型全集：67种</li>
+      <li>小组登录提示：相继5个版本测试</li>
+      <li>几乎所有新功能都要灰度上线</li>
+      <li>移动化</li>
+      <li>特点：新旧代码并存、业务逻辑复杂、迭代快、需求多变、向前兼容、移动设备友好</li>
+      <li>不希望用人海战术解决这些问题
+    </ul>
+  </article>
+  </div>
+
+  <div class="page">
+    <article>
+    <h2>工程问题</h2>
+    <ul class="list-1">
+    <li>新旧代码并存时，代码冗余问题、静态文件管理 
+    <li>业务逻辑复杂时，通用和业务代码的分离、复杂度控制（代码架构问题）
+    <li>需求多变时，大而全的通用组件无用武之地，轻量的、功能单一的更便于复用
+    <li>迭代越快，对代码复用、模块化组织要求越高
+    <li>追求高效同时，如何保证代码质量
+    <li>追求高效同时，如何保证前后端性能最优
+    <li>追求高效同时，不能忽视安全问题
+    <li>追求高效同时，如何保证人的发挥空间
+    <li>通常利用工具提高生产力，怎样设计有效的工具链:
+       <br>1. "工具防止人做愚蠢的事，也阻碍人干聪明的事"
+       <br>2. 工具不是越强大越好，而是简单有效最好
+       <br>3. 工具不是越傻瓜越好，要留给他人发挥的空间
+       <br>4. 提高生产力同时激发创造力
+    <li>响应式开发。网页的适配性(屏幕、交互和功能)
+    <li>团队协作模式
+    </ul>
+    </article>
+  </div>
+
+  <div class="page">
+    <article>
+      <h2>工程问题总结</h2>
+    <ol class="list-1">
+    <li>静态文件管理
+    <li>代码应用架构
+    <li>通用组件设计
+    <li>前端包管理
+    <li>代码review
+    <li>代码测试
+    <li>性能问题
+    <li>安全问题
+    <li>工具链
+    <li>模块化系统
+    <li>开发流程
+    <li>协作模式
+    </ol>
+    <p>在各种项目中反复磨练解决上述问题的经验 
+    </article>
+  </div>
+
+
+  <div class="page page-boxes">
+  <article>
+    <h2>例子: 在全站导航上加一个消息提醒</h2>
+    <p>技术问题：提示框UI和交互的实现
+    <p>工程问题：
+    <ol class="list-1">
+      <li>导航是跨产品线
+      <li>各产品可能是在不同的代码仓库中
+      <li>它是临时的一周后撤下
+      <li>只有首次注册的新用户才能看到
+      <li>它有多个版本测试使用效果
+      <li>它不能影响页面的性能
+    </ol>
+    <p>前端开发80％是工程问题，20％是技术问题
+  </article>
+  </div>
+
+
+   <div class="page">
+    <article>
+      <h2>技术问题</h2>
+    <ul class="list-1">
+      <li>技术问题是标准问题
+      <li>学习前端技术从阅读标准开始
+      <li>Javascript: 
+          <br>1998.10, ECMA-262 1st Edition(ES1), Javascript标准化的开始
+          <br>IE6(<a href="http://msdn.microsoft.com/en-us/library/yek4tbz0%28v=vs.85%29.aspx" target="_blank">JScript</a>5.6, ES3)/IE7(JScript5.7, ES3)/IE8(JScript5.8, ES3)/IE9,10(JScript.NET, <a href="http://www.ecma-international.org/publications/standards/Ecma-262.htm" target="_blank">ES5/ES5.1</a>)
+          <br>Firefox 4+(ES5/5.1)/Chrome1~10(ES3), Chrome10+(ES5/5.1)/Safari3~5(ES3), Safari5+(ES5)/Opera11+(ES5)
+      <li>CSS: 
+        <br><a href="http://www.w3.org/TR/CSS21/" target="_blank">CSS2.1</a>，CSS的稳定版
+        <br>CSS3是以CSS2.1为核心，发展或替换其中的模块。关注<a href="http://www.w3.org/Style/CSS/current-work" target="_blank">各个模块的进展</a>和<a href="http://caniuse.com/#cats=CSS" target="_blank">浏览器支持情况</a>
+       <li>HTML:<a href="http://www.w3.org/TR/html401/" target="_blank">HTML 4.01</a>、<a href="http://www.w3.org/TR/html51/" target="_blank">HTML 5.1</a> 
+       <li><a href="http://www.w3.org/TR/2011/REC-SVG11-20110816/" target="_blank">SVG1.1</a>
+       <li><a href="http://www.w3.org/standards/techs/js#w3c_all">Javascript APIs</a>
+       <li><a href="http://www.w3.org/TR/components-intro/">Web Components</a>
+       <li><a href="http://www.w3.org/DOM/Activity">DOM(Level 1, 2, 3)</a>
+       <li>更多: <a href="http://www.w3.org/TR/" target="_blank">http://www.w3.org/TR/</a>
+    </ul>
+    </article>
+  </div>
+
+
+
+  <div class="page">
+    <article>
+      <h2>技术问题和工程问题的关系</h2>
+      <ul class="list-1">
+      <li>下面属于技术问题范畴的是:
+      <br>a. jQuery
+      <br>b. Backbone
+      <br>c. Mustache
+      <br>d. Grunt
+      <br>e. Ajax
+      <br>f. requireJS
+      <li>技术准备是创造力的基础
+      <li>技术准备为(更完美)解决具体问题提供更丰富的选择
+      <br>高效开发的基本前提是选对方案
+    <h3>例子: 不固定宽高内容的水平垂直居中</h3>
+    <p>基本的技术问题 － CSS布局
+    <iframe src="http://dabblet.com/gist/5563872" frameborder="0" width="100%" height="360"></iframe>
+    <a href="http://dabblet.com/gist/5563872" target="_blank">弹出查看</a>
+    <p>实际项目需求的原型 － 弹出层
+    <iframe width="100%" height="400" src="http://jsfiddle.net/P4DGa/5/embedded/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+    <a href="http://fiddle.jshell.net/P4DGa/5/show/light/" target="_blank">弹出查看</a>
+      <li>工程问题具有针对性，工程经验具有普适性
+      <li>工程师的修炼：
+        <br> 第1阶段 - 知识积累 (一名前端工程师应有的技术准备)
+        <br> 第2阶段 - 拓宽视野 (优秀的开源项目及其背后的设计理念)
+        <br> 第3阶段 - 工程经验 (总是可以在各种限制条件下，找到解决问题的最佳途径)
+        <br> 第4阶段 - 建立新标准
+      </ul>
+    </article>
+  </div>
+
+  
+  <div class="page">
+    <article style="background:#fff url(static/pics/figure.1.jpg) no-repeat 0 0;background-size:100% auto;">
+    <p style="margin:0;color:#fff;font-size:2em;">场下的训练水平，差距不大
+    <p style="margin:0;color:#fff;font-size:2em;">场上的比赛经验，关键时刻的发挥，是巨星跟普通球员的差别
+    </article>
+  </div>
+
+
+  <div class="page">
+    <article>
+    <h2>一些经验</h2>
+    <ul class="list-1">
+      <li>模块应该是完全独立(为了实现需要工具配合)
+      <li>通用代码中绝不混杂业务逻辑
+      <li>业务逻辑复杂时，应该按业务类型拆分，不是按展现形式拆分
+      <li>代码架构借鉴SOLID原则:
+      <p style="margin:0;font-size:14px;color:#666;">
+           S - Single Responsibility Principle 职责分离原则
+      <br> O - Open/Closed Principle 开闭原则
+      <br> L - Liskov Substitution Principle 里氏替换原则
+      <br> I - Interface Segregation Principle 接口分离
+      <br> D - Dependency Inversion Principle 依赖反转原则
+      <li>从实际开发中积累形成自己的生态体系
+      <li>不要大而全。只解决一个问题
+      <li>工具要简单、配置要简单
+      <li>工具是可以替换的，而且总是在变的，不要成为工具的奴隶
+         <br>"我们的发明常常是漂亮的工具，只是吸引我们的注意力，使我们离开了严肃的事物。"  -- 卢梭《瓦尔登湖》
+      <li>对于复杂的问题，不断进行拆解直到足够简单
+      <li>原研哉的Exformation哲学
+      <li>做有趣的事
+    </ul>
+    </article>
+  </div>
+
+
+  <div class="page">
+    <article>
+    <h2>图片上传项目分解</h2>
+    <div class="pic">
+      <img src="static/pics/figure.2.jpg" width="80%" alt="" />
+    </div>
+    </article>
+  </div>
+
+
+  <div class="page">
+    <article>
+    <h2>演示</h2>
+    <ol class="list-1">
+      <li>模块的独立性
+      <li>无配置的静态文件打包
+      <li>业务模块组合
+      <li>前后端共用模板
+      <li>CSS预处理 - SCSS/支持source mapping
+      <li>JS通用组件复用及如何隔离业务逻辑
+    </ol>
+    </article>
+  </div>
+
+
+  <div class="page">
+    <article style="background:#fff url(static/pics/figure.3.jpg) no-repeat 50% 50%;background-size:100%;"></article>
+  </div>
+
+
+  <div class="page page-end">
+    <article>
+    <p>Q & A
+    </article>
+  </div>
+
+
+  <div class="no-support">
+    Sorry! 暂不支持你的浏览器，请用Chrome打开...
+  </div>
+  <script src="static/js/prism.js"></script>
+  <script src="static/js/zepto.js"></script>
+  <script src="static/js/slides.js"></script>
+</body>
+</html>
