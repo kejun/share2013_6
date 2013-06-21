@@ -93,6 +93,25 @@ p {
   box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.2);
 }
 
+.bn-toggle-fullscreen {
+  position:absolute;
+  z-index:10;
+  font-size:12px;
+  color:#ccc;
+}
+.bn-toggle-fullscreen input {
+  -webkit-appearance: none;
+  border: 1px solid #ccc;
+  width: 10px;
+  height: 10px;
+  border-radius: 100%;
+  vertical-align: text-bottom;
+}
+
+.bn-toggle-fullscreen input:checked {
+  background: #ddd;
+}
+
 .list li {
   font-size: 2em;
   margin: 1ex 0;
@@ -135,7 +154,6 @@ p {
   -webkit-transform: translate(0, 0) scale(1) translateZ(0);
 }
 
-
 .next-slide-in {
   display: block;
   overflow: hidden;
@@ -164,7 +182,6 @@ p {
   -webkit-transform-origin:0 50%;
 }
 
-
 @-webkit-keyframes next_slide_in {
   from {
     -webkit-transform: translate(100%, 0) scale(1) translateZ(0) rotateY(10deg);
@@ -186,8 +203,6 @@ p {
     opacity: 0;
   }
 }
-
-
 
 @-webkit-keyframes prev_slide_in {
   from {

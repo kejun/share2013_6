@@ -31,6 +31,7 @@ $.each($('pre[data-src]'), function() {
 
 
 var current_num = location.href.split('?')[1]|0 || 0;
+var mode;
 
 var doc = $(document);
 var slides = $('.page'); 
@@ -118,5 +119,41 @@ doc.on('keyup', function(e) {
 })
 .on('pagechange', function(e, num, direction) {
   show(num, direction);
+  if (mode === 'fullscreen') {
+    return;
+  }
   history.pushState(null, '第' + current_num + '页', makeURL(current_num));
 });
+
+
+;(function() {
+  document.cancelFullScreen = document.webkitCancelFullScreen 
+                           || document.mozCancelFullScreen
+                           || document.cancelFullScreen;
+
+  document.body.requestFullScreen = document.body.webkitRequestFullScreen 
+                                 || document.body.mozRequestFullScreen
+                                 || document.body.requestFullScreen;
+
+  var bn = $('.toggle-fullscreen').bind('change', function() {
+    if (this.checked) {
+      document.body.requestFullScreen();
+    } else {
+      document.cancelFullScreen();
+    }
+  });
+
+  document.onfullscreenchange = document.onwebkitfullscreenchange =
+	document.onmozfullscreenchange = function() {
+    var is_full = document.webkitIsFullScreen || document.mozFullScreen ||
+		document.isFullScreen;
+    if(is_full) {
+      mode = 'fullscreen';
+    } else {
+      mode = 'normal';
+      bn[0].checked = '';
+      history.pushState(null, '第' + current_num + '页', makeURL(current_num));
+    }
+  };
+
+})();
