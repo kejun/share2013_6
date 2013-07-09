@@ -141,6 +141,15 @@ p {
   max-width: 100%;
 }
 
+.slide-item {
+ opacity: 0; 
+}
+
+.slide-item-in {
+ opacity: 1; 
+ -webkit-transition: opacity .5s;
+}
+
 .no-support {
   position: absolute;
   width: 100%;

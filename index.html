@@ -36,39 +36,39 @@
   <article>
     <h2>"简单"背后</h2>
     <ul class="list-1 col">
-      <li>未登录首页：2个版本</li>
-      <li>登录首页: 最多时6个版本</li>
-      <li>小组首页：最多时5个版本</li>
-      <li>广播类型全集：195种</li>
-      <li>提醒类型全集：67种</li>
-      <li>小组登录提示：相继5个版本测试</li>
-      <li>几乎所有新功能都要灰度上线</li>
-      <li>移动化</li>
-      <li>特点：新旧代码并存、业务逻辑复杂、迭代快、需求多变、向前兼容、移动设备友好</li>
-      <li>不希望用人海战术解决这些问题
+      <li class="slide-item">未登录首页：2个版本</li>
+      <li class="slide-item">登录首页: 最多时6个版本</li>
+      <li class="slide-item">小组首页：最多时5个版本</li>
+      <li class="slide-item">广播类型全集：195种</li>
+      <li class="slide-item">提醒类型全集：67种</li>
+      <li class="slide-item">小组登录提示：相继5个版本测试</li>
+      <li class="slide-item">几乎所有新功能都要灰度上线</li>
+      <li class="slide-item">移动化的策略</li>
+      <li class="slide-item">特点：新旧代码并存、业务逻辑复杂、迭代快、需求多变、向前兼容、移动设备友好</li>
+      <li class="slide-item">不希望用人海战术解决这些问题
     </ul>
   </article>
   </div>
 
   <div class="page">
     <article>
-    <h2>工程问题的产生</h2>
+    <h2>自然产生的工程问题</h2>
     <ul class="list-1">
-    <li>新旧代码并存时，代码冗余问题、静态文件管理 
-    <li>业务逻辑复杂时，通用和业务代码的分离、复杂度控制（代码架构问题）
-    <li>需求多变时，大而全的通用组件无用武之地，轻量的、功能单一的更便于复用
-    <li>迭代越快，对代码复用、模块化组织要求越高
-    <li>追求高效同时，如何保证代码质量
-    <li>追求高效同时，如何保证前后端性能最优
-    <li>追求高效同时，不能忽视安全问题
-    <li>追求高效同时，如何保证人的发挥空间
-    <li>通常利用工具提高生产力，怎样设计有效的工具链:
+    <li class="slide-item">新旧代码并存时，代码冗余问题、静态文件管理 
+    <li class="slide-item">业务逻辑复杂时，通用和业务代码的分离、复杂度控制（代码架构问题）
+    <li class="slide-item">需求多变时，大而全的通用组件无用武之地，轻量的、功能单一的更便于复用
+    <li class="slide-item">迭代越快，对代码复用、模块化组织要求越高
+    <li class="slide-item">追求高效同时，如何保证代码质量
+    <li class="slide-item">追求高效同时，如何保证前后端性能最优
+    <li class="slide-item">追求高效同时，不能忽视安全问题
+    <li class="slide-item">追求高效同时，如何保证人的发挥空间
+    <li class="slide-item">通常利用工具提高生产力，怎样设计有效的工具链:
        <br>1. "工具防止人做愚蠢的事，也阻碍人干聪明的事"
        <br>2. 工具不是越强大越好，而是简单有效最好
        <br>3. 工具不是越傻瓜越好，要留给他人发挥的空间
        <br>4. 提高生产力同时激发创造力
-    <li>响应式开发。网页的适配性、灵活的输出（重新思考）
-    <li>团队协作模式
+    <li class="slide-item">响应式开发。网页的适配性、灵活的输出（重新思考）
+    <li class="slide-item">团队协作模式
     </ul>
     </article>
   </div>
@@ -77,20 +77,20 @@
     <article style="background:#fff url(static/pics/figure.4.jpg) no-repeat 600px 0;background-size:auto 100%;">
       <h2>总结: 工程"支柱"问题</h2>
     <ol class="list-1">
-    <li>静态文件管理
-    <li>代码应用架构
-    <li>通用组件设计
-    <li>前端组件复用(包管理)
-    <li>代码review
-    <li>代码测试
-    <li>性能问题
-    <li>安全问题
-    <li>工具链
-    <li>模块化模板系统
-    <li>开发流程
-    <li>协作模式
+    <li class="slide-item">静态文件管理
+    <li class="slide-item">代码应用架构
+    <li class="slide-item">通用组件设计
+    <li class="slide-item">前端组件复用(包管理)
+    <li class="slide-item">代码review
+    <li class="slide-item">代码测试
+    <li class="slide-item">性能问题
+    <li class="slide-item">安全问题
+    <li class="slide-item">工具链
+    <li class="slide-item">模块化模板系统
+    <li class="slide-item">开发流程
+    <li class="slide-item">协作模式
     </ol>
-    <p>工程开发经验：解决工程问题的经验
+    <p class="slide-item">工程开发经验：解决工程问题的经验
     </article>
   </div>
 
@@ -98,17 +98,17 @@
   <div class="page page-boxes">
   <article style="background:#fff url(static/pics/figure.4.png) no-repeat 90% center; background-size: 60% auto;">
     <h2>例子: 在全站导航上加一个消息提醒</h2>
-    <p>技术问题：提示框UI和交互的实现
-    <p>工程问题：
+    <p class="slide-item">技术问题：提示框UI和交互的实现
+    <p class="slide-item">工程问题：
     <ol class="list-1">
-      <li>导航是跨产品线
-      <li>各产品可能是在不同的代码仓库中
-      <li>它是临时的一周后撤下
-      <li>只有首次注册的新用户才能看到
-      <li>它有多个版本测试使用效果
-      <li>它不能影响页面的性能
+      <li class="slide-item">导航是跨产品线
+      <li class="slide-item">各产品可能是在不同的代码仓库中
+      <li class="slide-item">它是临时的一周后撤下
+      <li class="slide-item">只有首次注册的新用户才能看到
+      <li class="slide-item">它有多个版本测试使用效果
+      <li class="slide-item">它不能影响页面的性能
     </ol>
-    <p>前端开发80％是工程问题，20％是技术问题
+    <p class="slide-item">前端开发80％是工程问题，20％是技术问题
   </article>
   </div>
 
@@ -117,16 +117,18 @@
     <article>
       <h2>技术问题是什么</h2>
     <ul class="list-1">
-      <li>技术问题是标准问题
-      <li>学习前端技术从阅读标准开始
-      <li>Javascript: 
+      <li class="slide-item">技术问题是标准问题
+      <li class="slide-item">学习前端技术从阅读标准开始
+      <li class="slide-item">Javascript: 
           <br>1998.10, ECMA-262 1st Edition(ES1), Javascript标准化的开始
           <br>IE6(<a href="http://msdn.microsoft.com/en-us/library/yek4tbz0%28v=vs.85%29.aspx" target="_blank">JScript</a>5.6, ES3)/IE7(JScript5.7, ES3)/IE8(JScript5.8, ES3)/IE9,10(JScript.NET, <a href="http://www.ecma-international.org/publications/standards/Ecma-262.htm" target="_blank">ES5/ES5.1</a>)
           <br>Firefox 4+(ES5/5.1)/Chrome1~10(ES3), Chrome10+(ES5/5.1)/Safari3~5(ES3), Safari5+(ES5)/Opera11+(ES5)
-      <li>CSS: 
+      <li class="slide-item">CSS: 
         <br><a href="http://www.w3.org/TR/CSS21/" target="_blank">CSS2.1</a>，CSS的稳定版
         <br>CSS3是以CSS2.1为核心，发展或替换其中的模块。关注<a href="http://www.w3.org/Style/CSS/current-work" target="_blank">各个模块的进展</a>和<a href="http://caniuse.com/#cats=CSS" target="_blank">浏览器支持情况</a>
-       <li>HTML:<a href="http://www.w3.org/TR/html401/" target="_blank">HTML 4.01</a>、<a href="http://www.w3.org/TR/html51/" target="_blank">HTML 5.1</a> 
+       <li class="slide-item">HTML:<a href="http://www.w3.org/TR/html401/" target="_blank">HTML 4.01</a>、<a href="http://www.w3.org/TR/html51/" target="_blank">HTML 5.1</a> 
+     </ul>
+     <ul class="list-1 slide-item">
        <li><a href="http://www.w3.org/TR/2011/REC-SVG11-20110816/" target="_blank">SVG1.1</a>
        <li><a href="http://www.w3.org/standards/techs/js#w3c_all">Javascript APIs</a>
        <li><a href="http://www.w3.org/TR/components-intro/">Web Components</a>
@@ -149,22 +151,31 @@
       <br>d. Grunt
       <br>e. Ajax
       <br>f. requireJS
-      <li>技术准备是创造力的基础
-      <li>技术准备为(更完美)解决具体问题提供更丰富的选择
-      <br>高效开发的基本前提是选对方案
+      <li class="slide-item">技术准备是创造力的基础
+      <li class="slide-item">技术准备为(更完美)解决具体问题提供更丰富的选择
+      <br>开发效率的基本前提是选对方案
+    <li>
+    <div class="slide-item">
     <h3>例子: 不固定宽高内容的水平垂直居中</h3>
     <p>基本的技术问题 － CSS布局
     <iframe src="http://dabblet.com/gist/5563872" frameborder="0" width="100%" height="360"></iframe>
     <a href="http://dabblet.com/gist/5563872" target="_blank">弹出查看</a>
+    </div>
+
+    <div class="slide-item">
     <p>实际项目需求的原型 － 弹出层
     <iframe width="100%" height="400" src="http://jsfiddle.net/P4DGa/6/embedded/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
     <a href="http://fiddle.jshell.net/P4DGa/6/show/light/" target="_blank">弹出查看</a>
-    <p>合理方案是CSS + JS + HTML，不是JS Only
+    </div>
 
-      <li>工程问题具有针对性，工程经验具有普适性
-      <li>工程师的修炼：
+    <p class="slide-item">合理方案是CSS + JS + HTML，不是JS Only
+
+    <li class="slide-item">过程：从分析问题出发，找出“技术点”（定义问题），通用demo找到最合适的方案(解决问题)，融合到一起(架构设计)，产出代码
+    <li class="slide-item">是否回到问题的本质，经历一个思考、尝试的过程，再coding？还是直接套用僵硬的形式？
+    <li class="slide-item">引出一个问题，工程师的修炼（修养和磨练）：
         <br> 第1阶段 - 知识积累 (一名前端工程师应有的技术准备)
         <br> 第2阶段 - 拓宽视野 (优秀的开源项目及其背后的设计理念)
+        <br>(职业前端工程师的素质养成)
         <br> 第3阶段 - 工程经验 (总是可以在各种限制条件下，找到解决问题的最佳途径)
         <br> 第4阶段 - 建立新标准
       </ul>
@@ -174,8 +185,10 @@
   
   <div class="page">
     <article style="background:#fff url(static/pics/figure.1.jpg) no-repeat 0 0;background-size:100% auto;">
+    <div class="slide-item">
     <p style="margin:0;color:#fff;font-size:2em;">场下的训练水平，差距不大
     <p style="margin:0;color:#fff;font-size:2em;">场上的比赛经验，关键时刻的发挥，是巨星跟普通球员的差别
+    </div>
     </article>
   </div>
 
@@ -184,25 +197,30 @@
     <article>
     <h2>一些经验...</h2>
     <ul class="list-1">
-      <li>模块要完全独立(借助工具实现)
-      <li>通用代码中绝不混杂业务逻辑
-      <li>业务逻辑复杂时，应该按业务类型拆分，不是按展现形式拆分
-      <li>代码架构借鉴SOLID原则:
+      <li class="slide-item">模块要完全独立(借助工具实现)
+      <li class="slide-item">通用代码中绝不混杂业务逻辑
+      <li class="slide-item">业务逻辑复杂时，应该按业务类型拆分，不是按展现形式拆分
+      <li class="slide-item">代码架构领会SOLID原则:
       <p style="margin:0;font-size:14px;color:#666;">
               S - Single Responsibility Principle 职责分离原则
          <br> O - Open/Closed Principle 开闭原则
          <br> L - Liskov Substitution Principle 里氏替换原则
          <br> I - Interface Segregation Principle 接口分离
          <br> D - Dependency Inversion Principle 依赖反转原则
-      <li>从实际开发中积累形成的生态体系
-      <li>技术问题上开放，工程问题上保守
-      <li>在完成的基础上追求完美
-      <li>工具要简单、配置要简单
-      <li>工具是可以替换的，而且总是在变的，不要成为工具的奴隶
-         <br>"我们的发明常常是漂亮的工具，只是吸引我们的注意力，使我们离开了严肃的事物。"  -- 梭罗《瓦尔登湖》
-      <li>对于复杂的问题，不断进行拆解直到足够简单
-      <li>原研哉的Exformation哲学，受用！
-      <li>更多的时间做有趣的事!
+      <li class="slide-item">代码架构设计的目的性
+       <p style="margin:0;font-size:14px;color:#666;">"A good architecture allows volatile decisions to be easily changed" - Bob大叔
+      <li class="slide-item">从实际开发中积累形成的生态体系
+      <li class="slide-item">技术问题上开放，工程问题上保守
+      <li class="slide-item">在完成的基础上追求完美
+      <li class="slide-item">工具要简单、配置要简单
+      <li class="slide-item">工具是可以替换的，而且总是在变的，不要成为工具的奴隶
+         <p style="margin:0;font-size:14px;color:#666;">"我们的发明常常是漂亮的工具，只是吸引我们的注意力，使我们离开了严肃的事物。"  -- 梭罗《瓦尔登湖》
+         <p style="margin:0;font-size:14px;color:#666;">"是否符合潮流，是否与其它形式相关或孤立都不重要。重要的是，这个形式的产生，是否基于内在的需要！" -- 康定斯基《关于形式问题》
+         <p style="margin:0;font-size:14px;color:#666;">形式越重，越容易忽视本质
+         <li class="slide-item">对于复杂的问题，不断进行拆解直到足够简单
+         <br>复杂问题是简单问题的积分
+      <li class="slide-item">原研哉的Exformation哲学，受用！
+      <li class="slide-item">更多的时间做有趣的事!
     </ul>
     </article>
   </div>

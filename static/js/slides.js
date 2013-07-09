@@ -93,11 +93,14 @@ function makeURL(num) {
 
 doc.on('keyup', function(e) {
   e.preventDefault();
-  if (('39,40,32,74,').indexOf(e.keyCode + ',') + 1) {
+  if (('39,32,74,').indexOf(e.keyCode + ',') + 1) {
     next();
   }
   else if (('37,38,75,').indexOf(e.keyCode + ',') + 1) {
     prev();
+  }
+  else if (e.keyCode == 40) {
+    showSlideItem(slides.eq(current_num));
   }
 })
 //.on('mousedown', function(e) {
@@ -125,6 +128,24 @@ doc.on('keyup', function(e) {
   history.pushState(null, '第' + current_num + '页', makeURL(current_num));
 });
 
+var showSlideItem = function(page) {
+  var item = page.find('.slide-item').eq(0).removeClass('slide-item').addClass('slide-item-in');
+};
+
+$('.page').on('click', function(e) {
+  if (e.target.tagName == 'A') {
+    return;
+  }
+  var page = $(this);
+  showSlideItem(page);
+})
+.on('tap', function(e) {
+  if (e.target.tagName == 'A') {
+    return;
+  }
+  var page = $(this);
+  showSlideItem(page);
+});
 
 ;(function() {
   document.cancelFullScreen = document.webkitCancelFullScreen 
