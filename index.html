@@ -10,6 +10,9 @@
   <link rel="stylesheet" href="static/css/prism.css"  media="screen"/>
   <link rel="stylesheet" href="static/css/slides.css" media="screen" />
   <link rel="stylesheet" href="static/css/customiz.css" media="screen" />
+  <style media="screen">
+    .note { display:none; }
+  </style>
   <style media="print">
    .no-support, iframe { display: none; }
    .page { margin-bottom: 2em; }
@@ -54,20 +57,22 @@
     <article>
     <h2>自然产生的工程问题</h2>
     <ul class="list-1">
-    <li class="slide-item">新旧代码并存时，代码冗余问题、静态文件管理 
-    <li class="slide-item">业务逻辑复杂时，通用和业务代码的分离、复杂度控制（代码架构问题）
-    <li class="slide-item">需求多变时，大而全的通用组件无用武之地，轻量的、功能单一的更便于复用
-    <li class="slide-item">迭代越快，对代码复用、模块化组织要求越高
-    <li class="slide-item">追求高效同时，如何保证代码质量
-    <li class="slide-item">追求高效同时，如何保证前后端性能最优
-    <li class="slide-item">追求高效同时，不能忽视安全问题
-    <li class="slide-item">追求高效同时，如何保证人的发挥空间
-    <li class="slide-item">通常利用工具提高生产力，怎样设计有效的工具链:
-       <br>1. "工具防止人做愚蠢的事，也阻碍人干聪明的事"
+    <li class="slide-item">新旧代码并存 >>>>>>>> 代码冗余问题、静态文件管理 
+    <li class="slide-item">业务逻辑复杂 >>>>>>>> 通用和业务代码的分离、复杂度控制（代码架构问题）
+    <li class="slide-item">需求多变 >>>>>>>>>>> 大而全的通用组件无用武之地，轻量的/单一功能的更便于复用
+    <p class="note">当有人问我通用组件的版本管理时，我才意识到这对于我来说早已不是问题。粒度越小越稳定，不能满足需求时通常也不去改它，而是扩展或替换。
+    <li class="slide-item">迭代周期短/频率高 >>>> 对代码复用、模块化组织要求越高
+    <li class="slide-item">追求高效 <<<<<<<<<<< 如何保证代码质量
+    <li class="slide-item">追求高效 <<<<<<<<<<< 如何保证前后端性能最优
+    <li class="slide-item">追求高效 <<<<<<<<<<< 不能忽视安全问题
+    <li class="slide-item">追求高效 <<<<<<<<<<< 如何保证人的发挥空间
+    <li class="slide-item">通常利用工具提高生产力，怎样设计有效的工具链(工具的负面作用):
+       <p style="margin:0;font-size:16px;color:#666;">
+           1. "工具防止人做愚蠢的事，也阻碍人干聪明的事"
        <br>2. 工具不是越强大越好，而是简单有效最好
        <br>3. 工具不是越傻瓜越好，要留给他人发挥的空间
        <br>4. 提高生产力同时激发创造力
-    <li class="slide-item">响应式开发。网页的适配性、灵活的输出（重新思考）
+       <li class="slide-item">前端驱动 >>>>>>>>>>> 响应式开发。网页的适配性、灵活的输出（重新思考网页）
     <li class="slide-item">团队协作模式
     </ul>
     </article>

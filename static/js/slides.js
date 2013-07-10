@@ -139,7 +139,7 @@ $('.page').on('click', function(e) {
   var page = $(this);
   showSlideItem(page);
 })
-.on('tap', function(e) {
+.on('longTap', function(e) {
   if (e.target.tagName == 'A') {
     return;
   }
