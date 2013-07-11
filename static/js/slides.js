@@ -47,6 +47,10 @@ slides.bind('webkitAnimationEnd', function() {
 show(current_num);
 
 function next() {
+  console.log(slides.eq(current_num));
+  if (!showSlideItem(slides.eq(current_num))) {
+    return;
+  }
   var copy_num = current_num;
   current_num = current_num + 1 >= slides.length ? slides.length - 1 : current_num + 1;
   if (copy_num === current_num) {
@@ -128,9 +132,17 @@ doc.on('keyup', function(e) {
   history.pushState(null, '第' + current_num + '页', makeURL(current_num));
 });
 
-var showSlideItem = function(page) {
-  var item = page.find('.slide-item').eq(0).removeClass('slide-item').addClass('slide-item-in');
-};
+function showSlideItem(page) {
+  var item = page.find('.slide-item');
+  if (item.length == 0) {
+    return 'end';
+  }
+  item = item.eq(0)
+  if (item.data('action')) {
+    (window[item.data('action')]).call(null, item);
+  }
+  item.removeClass('slide-item').addClass('slide-item-in');
+}
 
 $('.page').on('click', function(e) {
   if (e.target.tagName == 'A') {

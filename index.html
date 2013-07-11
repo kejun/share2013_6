@@ -12,6 +12,10 @@
   <link rel="stylesheet" href="static/css/customiz.css" media="screen" />
   <style media="screen">
     .note { display:none; }
+    .bye-ie6 { border-collapse:collapse; }
+    .bye-ie6 td:first-child  { text-align:left; background-color: transparent;color:#333;border:1px solid; }
+    .bye-ie6 td  { background-color: green;color:#fff;text-align:center;vertical-align:middle; }
+    .bye-ie6 .stat-n  { background-color:red; }
   </style>
   <style media="print">
    .no-support, iframe { display: none; }
@@ -72,8 +76,8 @@
        <br>2. 工具不是越强大越好，而是简单有效最好
        <br>3. 工具不是越傻瓜越好，要留给他人发挥的空间
        <br>4. 提高生产力同时激发创造力
-       <li class="slide-item">前端驱动 >>>>>>>>>>> 响应式开发。网页的适配性、灵活的输出（重新思考网页）
-    <li class="slide-item">团队协作模式
+       <li class="slide-item">团队内部的技术驱动力 >>>> 响应式开发。网页的适配性、灵活的输出（重新思考网页）
+       <li class="slide-item">团队协作模式 >>>>>>>>>>> 适合团队特点的工作流
     </ul>
     </article>
   </div>
@@ -122,7 +126,7 @@
     <article>
       <h2>技术问题是什么</h2>
     <ul class="list-1">
-      <li class="slide-item">技术问题是标准问题
+      <li class="slide-item">技术问题是标准问题 <span class="slide-item" style="font-size:.9em;">(纯粹前端技术===W3C/ECMA-262制订的标准, 民间/企业标准除外, 如commonjs, open graph...)</span>
       <li class="slide-item">学习前端技术从阅读标准开始
       <li class="slide-item">Javascript: 
           <br>1998.10, ECMA-262 1st Edition(ES1), Javascript标准化的开始
@@ -130,7 +134,7 @@
           <br>Firefox 4+(ES5/5.1)/Chrome1~10(ES3), Chrome10+(ES5/5.1)/Safari3~5(ES3), Safari5+(ES5)/Opera11+(ES5)
       <li class="slide-item">CSS: 
         <br><a href="http://www.w3.org/TR/CSS21/" target="_blank">CSS2.1</a>，CSS的稳定版
-        <br>CSS3是以CSS2.1为核心，发展或替换其中的模块。关注<a href="http://www.w3.org/Style/CSS/current-work" target="_blank">各个模块的进展</a>和<a href="http://caniuse.com/#cats=CSS" target="_blank">浏览器支持情况</a>
+        <br>CSS3是以CSS2.1为核心，发展或替换其中的模块。参照CSS2.1标准框架学习，关注<a href="http://www.w3.org/Style/CSS/current-work" target="_blank">各个模块的进展</a>和<a href="http://caniuse.com/#cats=CSS" target="_blank">浏览器支持情况</a>
        <li class="slide-item">HTML:<a href="http://www.w3.org/TR/html401/" target="_blank">HTML 4.01</a>、<a href="http://www.w3.org/TR/html51/" target="_blank">HTML 5.1</a> 
      </ul>
      <ul class="list-1 slide-item">
@@ -144,6 +148,41 @@
   </div>
 
 
+  <div class="page">
+    <article>
+    <h2>技术的演进</h2>
+    <p>眼望趋势，脚踏实地。
+    <span class="slide-item">10年前的"事实标准"如今快要消失。00后的前端工程师将会幻想ie6时代是一段怎样"激情燃烧"的岁月</span>
+    <table class="bye-ie6 slide-item">
+      <thead>
+      <tr><th></th><th>IE6</th><th>IE7</th><th>IE8</th></tr>
+      </thead>
+      <tr><td>子选择器ul>li</td><td class="stat-n">N</td class="stat-n"><td>N</td><td>Y</td></tr>
+      <tr><td>链式选择器.class1.class2</td><td class="stat-n">N</td><td>Y</td><td>Y</td></tr>
+      <tr><td>属性选择器img[data-origin]</td><td class="stat-n">N</td><td>Y</td><td>Y</td></tr>
+      <tr><td>同级选择器p+p, p~p</td><td class="stat-n">N</td><td>Y</td><td>Y</td></tr>
+      <tr><td>非A伪类和伪元素选择器 input:focus, li:first-child:hover</td><td class="stat-n">N</td><td class="stat-n">N</td><td>Y</td></tr>
+      <tr><td>产生内容 div:after { content:"new"; }</td><td class="stat-n">N</td><td class="stat-n">N</td><td>Y</td></tr>
+      <tr><td>绝对定位同时指定4个位置值 .class1 { position:absolute;top:0;bottom:0;left:0;right:0; }</td><td class="stat-n">N</td><td>Y</td><td>Y</td></tr>
+      <tr><td>最小/大宽高 .class1 { max-width:80%; }</td><td class="stat-n">N</td><td>Y</td><td>Y</td></tr>
+      <tr><td>透明边框 .class1 { border-color:transparent; }</td><td class="stat-n">N</td><td>Y</td><td>Y</td></tr>
+      <tr><td>固定定位 .class1 { position:fixed; }</td><td class="stat-n">N</td><td>Y</td><td>Y</td></tr>
+      <tr><td>裁剪区域 .class1 { clip:rect(20px, 300px, 200px, 100px); }</td><td class="stat-n">N</td><td class="stat-n">N</td><td>Y</td></tr>
+      <tr><td>outline .class1 { outline: solid 1px red; }</td><td class="stat-n">N</td><td class="stat-n">N</td><td>Y</td></tr>
+      <tr><td>显示属性 display:inline-block/inline-table/list-item/run-in/table/table-cell/table-row...</td><td class="stat-n">N</td><td class="stat-n">N</td><td>Y</td></tr>
+      <tr><td>空格处理 .class1 { white-space:pre-line; }</td><td class="stat-n">N</td><td class="stat-n">N</td><td>Y</td></tr>
+      <tr><td>累加器 p { counter-increment:item; } p:before { content: counter(item) + '.'; }</td><td class="stat-n">N</td><td class="stat-n">N</td><td>Y</td></tr>
+      <tr><td>PNG24</td><td class="stat-n">N</td><td class="stat-n">N</td><td>Y</td></tr>
+      <tr><td>JSON解析</td><td class="stat-n">N</td><td class="stat-n">N</td><td>Y</td></tr>
+      <tr><td>Hashchange事件</td><td class="stat-n">N</td><td class="stat-n">N</td><td>Y</td></tr>
+      <tr><td>DataURI</td><td class="stat-n">N</td><td class="stat-n">N</td><td>Y</td></tr>
+    </table>
+    <a href="http://caniuse.com/#compare=ie+6,ie+7,ie+8,ie+9">more ...</a>
+
+    <p class="slide-item">前端技术领域: 技术更新快，工程开发经验相对更持久
+    </article>
+  </div>
+
 
   <div class="page">
     <article>
@@ -154,7 +193,8 @@
       <br>b. Backbone
       <br>c. Mustache
       <br>d. Grunt
-      <br>e. Ajax
+      <br><span>e. Ajax</span>
+      <span class="slide-item" data-action="answer01" style="margin-left:4em;font-size:.8em;">背后的标准：<a href="http://www.w3.org/TR/XMLHttpRequest/" target="_blank">XMLHTTPRequest Level 1</a>、<a href="http://www.w3.org/TR/XMLHttpRequest2/" target="_blank">XMLHTTPRequest Level 2</a></span>
       <br>f. requireJS
       <li class="slide-item">技术准备是创造力的基础
       <li class="slide-item">技术准备为(更完美)解决具体问题提供更丰富的选择
@@ -279,5 +319,10 @@
   <script src="static/js/prism.js"></script>
   <script src="static/js/zepto.js"></script>
   <script src="static/js/slides.js"></script>
+  <script>
+    function answer01(node) {
+      node.prev().css('color', 'green');
+    }
+  </script>
 </body>
 </html>
